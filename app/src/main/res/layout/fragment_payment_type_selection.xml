@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:src="@drawable/idol_logo_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Guideline para centrar el grupo -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_tipo_pago"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/guidelineCenter"
+        app:layout_constraintBottom_toTopOf="@id/btnPago1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón pago con tarjeta -->
+    <ImageButton
+        android:id="@+id/btnPago1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_ripple"
+        android:src="@drawable/cardpayment"
+        android:contentDescription="@string/text_pago_tarjeta"
+        app:layout_constraintTop_toBottomOf="@id/textHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPago2"
+        android:padding="@dimen/text_size_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Botón pago en efectivo -->
+    <ImageButton
+        android:id="@+id/btnPago2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_ripple"
+        android:src="@drawable/cashpayment"
+        android:contentDescription="@string/text_pago_efectivo"
+        app:layout_constraintTop_toBottomOf="@id/textHeader"
+        app:layout_constraintStart_toEndOf="@id/btnPago1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:padding="@dimen/text_size_small"
+        android:layout_marginStart="8dp" />
+
+    <!-- Texto debajo de btnPago1 -->
+    <TextView
+        android:id="@+id/textPago1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_pago_tarjeta"
+        app:layout_constraintTop_toBottomOf="@id/btnPago1"
+        app:layout_constraintStart_toStartOf="@id/btnPago1"
+        app:layout_constraintEnd_toEndOf="@id/btnPago1"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginTop="8dp" />
+
+    <!-- Texto debajo de btnPago2 -->
+    <TextView
+        android:id="@+id/textPago2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_pago_efectivo"
+        app:layout_constraintTop_toBottomOf="@id/btnPago2"
+        app:layout_constraintStart_toStartOf="@id/btnPago2"
+        app:layout_constraintEnd_toEndOf="@id/btnPago2"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón "Otro Pago" abajo -->
+    <Button
+        android:id="@+id/btnOtroPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_button_description"
+        app:layout_constraintTop_toBottomOf="@id/textPago1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginTop="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:src="@drawable/idol_logo_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Guideline para centrar el grupo -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Por favor inserte / acerque su tarjeta a la pinpad"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/guidelineCenter"
+        app:layout_constraintBottom_toTopOf="@id/imgPinpad"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/imgPinpad"
+        android:layout_width="@dimen/item_product_width"
+        android:layout_height="@dimen/item_product_width"
+        android:src="@drawable/cardpayment_mov"
+        android:contentDescription="Pinpad"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/textHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnCardPaymentBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        app:layout_constraintTop_toBottomOf="@id/imgPinpad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone"
+        android:layout_marginTop="32dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

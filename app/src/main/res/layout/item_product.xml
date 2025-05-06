@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/textProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+        <!-- Cantidad -->
+        <TextView
+            android:id="@+id/textCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/textPrecio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearNotasSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Notas -->
+        <TextView
+            android:id="@+id/textNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Special notes here"
+            android:gravity="start"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:background="#eff542"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/lineshadowHeader"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dash_shadow_line"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintTop_toBottomOf="@id/textNotas"
+        />
+</LinearLayout>

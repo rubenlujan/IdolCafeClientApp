@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.IdolCafeClientApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+
+    <style name="Theme.IdolCafeClientApp" parent="Base.Theme.IdolCafeClientApp" />
+    <style name="LinkStyle">
+        <item name="android:textColor">@color/link_color</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/link_background</item>
+    </style>
+</resources>

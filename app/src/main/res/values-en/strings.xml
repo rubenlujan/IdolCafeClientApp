@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Idol Cafe Menú</string>
+
+    <string name="first_menu_item_text">Hot Drinks</string>
+    <string name="first_menu_item_subtext">Americano, Capucchino, Late</string>
+    <string name="second_menu_item_text">Iced Drinks</string>
+    <string name="second_menu_item_subtext">Frappé, Sodas, Iced</string>
+    <string name="third_menu_item_text">Bakery</string>
+    <string name="third_menu_item_subtext">Bread and cookies</string>
+    <string name="fourth_menu_item_text">Alcohol</string>
+    <string name="fourth_menu_item_subtext">Sale only to those over 18 years of age and accompanied by food</string>
+    <string name="fifth_menu_item_text">Salads</string>
+    <string name="fifth_menu_item_subtext">Sandwich, Bagguetes</string>
+    <string name="sixth_menu_item_text">Desserts</string>
+    <string name="sixth_menu_item_subtext">A sweet and delicious sin</string>
+
+    <!--Shop Fragment -->
+    <string name="button_amount_text">Add: %s MXN</string>
+
+    <!--Order Fragment -->
+    <string name="button_amount_order_text">Proceed to payment: %s MXN</string>
+    <string name="textview_notes_text">Notes: %s</string>
+
+    <string name="empty_value">A</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button_description">Back</string>
+    <string name="text_client_alias">Enter your name and we\'ll call you when your order is ready</string>
+    <string name="text_seguir_comprando">Continue shopping</string>
+    <string name="text_regresar_menu">Back to Menu</string>
+    <string name="text_carrito_compras">Cart Shop</string>
+    <string name="text_ver_orden">Show Order</string>
+    <string name="text_agregar_nota">Do you want to add a note?</string>
+    <string name="text_quitar_item">Remove from order</string>
+    <string name="default_valor_one">1</string>
+    <string name="text_resumen_compra">PURCHASE SUMMARY</string>
+    <string name="text_lugar_consumo">Consume in place</string>
+    <string name="text_lugar_consumo_dos">Takeaway order</string>
+    <string name="text_articulos_pedido">Items in my order</string>
+    <string name="text_vaciar_carrito">Cancel Order</string>
+    <string name="text_tipo_pago">Select Payment Type</string>
+    <string name="text_pago_tarjeta">Card payment</string>
+    <string name="text_pago_efectivo">Cash payment</string>
+    <string name="text_pedido_confirmado">Confirmed order</string>
+    <string name="text_confirmar_cliente">Thank you for your purchase %s! We\'ll let you know when it\'s ready.</string>
+    <string name="text_requerir_cliente">Please provide the name of the person to whom the order will be made.</string>
+    <string name="text_requerir_tipo_orden">Select whether to take away or consume here.</string>
+
+    <!--Headers Items -->
+    <string name="text_header_producto">Item</string>
+    <string name="text_header_cantidad">Qty</string>
+    <string name="text_header_precio">Price</string>
+    <string name="text_price_text">%s MXN</string>
+    <string name="text_no_disponible"> -Not available at the moment- </string>
+</resources>

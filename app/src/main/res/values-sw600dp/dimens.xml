@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_menu">38sp</dimen>
+    <dimen name="header_korean_menu">26sp</dimen>
+    <dimen name="menu_buttons">100dp</dimen>
+    <dimen name="menu_text_size">20sp</dimen>
+    <dimen name="menu_subtext_size">16sp</dimen>
+
+    <dimen name="item_product_width">210sp</dimen>
+    <dimen name="item_product_height">200sp</dimen>
+    <dimen name="counter_button_size">34dp</dimen>
+
+    <dimen name="main_header_size">56sp</dimen>
+    <dimen name="main_korean_text_size">40sp</dimen>
+    <dimen name="main_margin_top">40dp</dimen>
+    <dimen name="main_button_size">120dp</dimen>
+    <dimen name="main_menu_text_size">24sp</dimen>
+    <dimen name="main_menu_subtext_size">16sp</dimen>
+    <dimen name="main_card_margin">16dp</dimen>
+
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_medium">32dp</dimen>
+    <dimen name="margin_large">48dp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+    <dimen name="text_size_medium">22sp</dimen>
+    <dimen name="text_size_large">34sp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="button_min_width">240dp</dimen>
+    <dimen name="counter_width">35dp</dimen>
+    <dimen name="counter_height">35dp</dimen>
+    <dimen name="padding_large">48dp</dimen>
+    <dimen name="logo_size">180sp</dimen>
+</resources>

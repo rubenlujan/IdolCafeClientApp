@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo animado -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Contenedor de botones -->
+    <LinearLayout
+        android:id="@+id/language_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Botón Español -->
+        <LinearLayout
+            android:id="@+id/btn_spanish"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_button_green"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/spanish"
+                android:contentDescription="Español" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Español"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Botón English -->
+        <LinearLayout
+            android:id="@+id/btn_english"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_button_blue"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/english"
+                android:contentDescription="English" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:text="Versión: x.x.x"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+</RelativeLayout>

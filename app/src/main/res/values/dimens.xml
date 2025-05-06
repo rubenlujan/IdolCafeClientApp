@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="items_menu_margin">40sp</dimen>
+    <dimen name="items_menu_size">70sp</dimen>
+    <dimen name="text_header">48sp</dimen>
+    <dimen name="text_subheader">24sp</dimen>
+    <dimen name="text_buttons">22sp</dimen>
+    <!--Menu Principal-->
+    <dimen name="header_menu">38sp</dimen>
+    <dimen name="header_korean_menu">26sp</dimen>
+    <dimen name="menu_buttons">120dp</dimen>
+    <dimen name="menu_text_size">20sp</dimen>
+    <dimen name="menu_subtext_size">16sp</dimen>
+
+    <dimen name="item_product_width">220dp</dimen>
+    <dimen name="item_product_height">190sp</dimen>
+
+    <!-- Agregar estas dimensiones -->
+    <dimen name="product_title_size">24sp</dimen>
+    <dimen name="product_description_size">16sp</dimen>
+    <dimen name="product_notes_size">16sp</dimen>
+    <dimen name="counter_button_size">28dp</dimen>
+
+    <!-- Agregar estas nuevas dimensiones -->
+    <dimen name="main_header_size">32sp</dimen>
+    <dimen name="main_korean_text_size">24sp</dimen>
+    <dimen name="main_margin_top">24dp</dimen>
+    <dimen name="main_margin_small">8dp</dimen>
+    <dimen name="main_margin_medium">16dp</dimen>
+    <dimen name="main_button_size">60dp</dimen>
+    <dimen name="main_menu_text_size">16sp</dimen>
+    <dimen name="main_menu_subtext_size">12sp</dimen>
+    <dimen name="main_card_margin">8dp</dimen>
+    <dimen name="main_card_corner_radius">8dp</dimen>
+    <dimen name="main_card_elevation">4dp</dimen>
+
+    <!-- Agregar estas dimensiones -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="button_min_width">160dp</dimen>
+    <dimen name="counter_width">35dp</dimen>
+    <dimen name="counter_height">35dp</dimen>
+    <dimen name="logo_size">210sp</dimen>
+</resources>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Idol Cafe Menú</string>
+
+    <string name="first_menu_item_text">Bebidas Calientes</string>
+    <string name="first_menu_item_subtext">Americano, Capucchino, Late</string>
+    <string name="second_menu_item_text">Bebidas Frías</string>
+    <string name="second_menu_item_subtext">Frappé, Sodas, Iced</string>
+    <string name="third_menu_item_text">Panaderia</string>
+    <string name="third_menu_item_subtext">Pan y galletas</string>
+    <string name="fourth_menu_item_text">Bebidas Con Alcohol</string>
+    <string name="fourth_menu_item_subtext">Venta solo a mayores de 18 años y acompañado con alimentos</string>
+    <string name="fifth_menu_item_text">Salados</string>
+    <string name="fifth_menu_item_subtext">Sandwich, Bagguetes</string>
+    <string name="sixth_menu_item_text">Postres</string>
+    <string name="sixth_menu_item_subtext">Un dulce y delicioso pecado</string>
+
+    <!--Shop Fragment -->
+    <string name="button_amount_text">Añadir: %s</string>
+
+    <!--Order Fragment -->
+    <string name="button_amount_order_text">Realizar pago: %s</string>
+    <string name="textview_notes_text">Nota: %s</string>
+
+    <string name="empty_value">A</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button_description">Regresar</string>
+    <string name="text_client_alias">Ingresa tu nombre y te llamaremos cuando esté listo tu pedido</string>
+    <string name="text_seguir_comprando">Seguir comprando</string>
+    <string name="text_regresar_menu">Volver al Menú</string>
+    <string name="text_carrito_compras">Carrito de Compras</string>
+    <string name="text_ver_orden">Ver Orden</string>
+    <string name="text_agregar_nota">¿Deseas agregar una nota?</string>
+    <string name="text_quitar_item">Quitar de la orden</string>
+    <string name="default_valor_one">1</string>
+    <string name="text_resumen_compra">RESUMEN DE COMPRA</string>
+    <string name="text_lugar_consumo">Consumir Aquí</string>
+    <string name="text_lugar_consumo_dos">Para llevar</string>}
+    <string name="text_articulos_pedido">Articulos en mi pedido</string>
+    <string name="text_vaciar_carrito">Cancelar Orden</string>
+    <string name="text_tipo_pago">Seleccione Tipo de Pago</string>
+    <string name="text_pago_tarjeta">Pago con tarjeta</string>
+    <string name="text_pago_efectivo">Pago en efectivo</string>
+    <string name="text_pedido_confirmado">Pedido confirmado</string>
+    <string name="text_confirmar_cliente">Gracias por tu compra %s! Te avisaremos cuando esté lista.</string>
+    <string name="text_requerir_cliente">Por favor proporciona a nombre de quien será la orden.</string>
+    <string name="text_requerir_tipo_orden">Selecciona si es para llevar o consumir aquí.</string>
+
+    <!--Items -->
+    <string name="text_header_producto">Producto</string>
+    <string name="text_header_cantidad">Cantidad</string>
+    <string name="text_header_precio">Precio</string>
+    <string name="text_price_text">%s</string>
+    <string name="text_no_disponible"> -No disponible por el momento- </string>
+</resources>

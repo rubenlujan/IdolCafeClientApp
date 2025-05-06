@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "220875659282",
+    "project_id": "idol-cafe-admin",
+    "storage_bucket": "idol-cafe-admin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220875659282:android:4c2305a6663511b99ea0cb",
+        "android_client_info": {
+          "package_name": "com.hrg.idolcafeclientapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAodyj0Wj676GSL5YREfyp0qRflPCjYodw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

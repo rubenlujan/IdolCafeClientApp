@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayoutShowOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_medium">
+
+        <ImageButton
+            android:id="@+id/btnOrderBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@null"
+            android:contentDescription="@string/back_button_description"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textResumenCompra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/text_resumen_compra"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/btnOrderBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnOrderBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnConfirmarOrden"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:text="Confirmar Pedido"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintTop_toBottomOf="@id/textResumenCompra"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#21ed2f"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <EditText
+            android:id="@+id/editTextNombrePedido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:hint="@string/text_client_alias"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/custom_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnConfirmarOrden" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardOrderType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/main_card_corner_radius"
+            app:cardElevation="@dimen/main_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNombrePedido"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+
+                <RadioGroup
+                    android:id="@+id/rgroupOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/checkBoxConsumirAqui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:text="@string/text_lugar_consumo"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/checkBoxParaLlevar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_lugar_consumo_dos"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textArticulos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_articulos_pedido"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardOrderType"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProductos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintBottom_toTopOf="@+id/LinearButtonsBottomOrder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textArticulos"
+            tools:listitem="@layout/item_product" />
+
+        <LinearLayout
+            android:id="@+id/LinearButtonsBottomOrder"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSeguirComprando"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3daef5"
+                android:textColor="@android:color/white"
+                android:text="@string/text_seguir_comprando"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="25dp"/>
+
+            <Button
+                android:id="@+id/btnLimpiarCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#edb347"
+                android:textColor="@android:color/black"
+                android:text="@string/text_vaciar_carrito"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeguirComprando" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

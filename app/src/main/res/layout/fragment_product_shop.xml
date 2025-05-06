@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Botón Regresar -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:background="@null"
+        android:padding="@dimen/padding_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:contentDescription="@string/back_button_description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"/>
+
+    <TextView
+        android:id="@+id/textViewNameProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_large"
+        android:gravity="center"
+        android:text="Nombre"
+        app:layout_constraintTop_toBottomOf="@id/imageProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewDescripProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:textSize="@dimen/text_size_medium"
+        android:gravity="center"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="Descripcion"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:hint="@string/text_agregar_nota"
+        android:textSize="@dimen/text_size_medium"
+        android:padding="@dimen/padding_small"
+        android:background="@drawable/custom_edittext"
+        android:maxLines="1"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescripProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView con scroll interno -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/editTextNotes"
+        app:layout_constraintBottom_toTopOf="@id/quantityLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewComplements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_complement_option"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Controles inferiores fijos -->
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonDeleteItemOrder">
+
+        <!-- Contenido del contador... -->
+        <ImageButton
+            android:id="@+id/btnDecrease"
+            android:layout_width="@dimen/counter_button_size"
+            android:layout_height="@dimen/counter_button_size"
+            android:src="@drawable/minus"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:id="@+id/tvCounter"
+            android:layout_width="@dimen/counter_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/default_valor_one"
+            android:textSize="@dimen/text_size_large"
+            />
+
+        <ImageButton
+            android:id="@+id/btnIncrease"
+            android:layout_width="@dimen/counter_button_size"
+            android:layout_height="@dimen/counter_button_size"
+            android:src="@drawable/plus"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <Button
+            android:id="@+id/buttonAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:minWidth="@dimen/button_min_width"
+            android:backgroundTint="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonDeleteItemOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minWidth="120dp"
+        android:backgroundTint="#f2ae27"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/text_quitar_item"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
