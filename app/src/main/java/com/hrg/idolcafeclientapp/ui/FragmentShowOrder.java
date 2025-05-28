@@ -49,6 +49,7 @@ import com.hrg.idolcafeclientapp.data.network.RetrofitClient;
 import com.hrg.idolcafeclientapp.data.repositories.ApiService;
 import com.hrg.idolcafeclientapp.data.viewmodel.SharedCartSingleton;
 import com.hrg.idolcafeclientapp.utils.CallServices;
+import com.hrg.idolcafeclientapp.utils.GenericMethods;
 import com.hrg.idolcafeclientapp.utils.LocaleHelper;
 import com.hrg.idolcafeclientapp.utils.ProductLoadCallback;
 
@@ -75,6 +76,8 @@ public class FragmentShowOrder extends Fragment {
     private OrderAdapter adapter;
     private Context context;
     private String message;
+    private int allow_terminal;
+    private int allow_alcohol;
     private OnButtonRemoveCartClickListener mListener;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -153,7 +156,8 @@ public class FragmentShowOrder extends Fragment {
         });
 
         context = LocaleHelper.wrap(requireContext());
-
+        allow_alcohol = GenericMethods.getAppSettingsIntValue(context, "allow_alcohol");
+        allow_terminal = GenericMethods.getAppSettingsIntValue(context, "allow_terminal");
         return view;
     }
     private void CalculateTotal() {
@@ -274,7 +278,7 @@ public class FragmentShowOrder extends Fragment {
         }, 10000);
     }
     private void cerrarFragment() {
-        Intent intent = new Intent(getActivity(), LanguageSelectionActivity.class);
+        Intent intent = new Intent(getActivity(), MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         getActivity().finish();
@@ -314,7 +318,7 @@ public class FragmentShowOrder extends Fragment {
                 .filter(product -> product.getCategory() == 4)
                 .count();
 
-        if(itemsFood == 0 && alcoholItems > 0 ) {
+        if(itemsFood == 0 && alcoholItems > 0 && allow_alcohol == 0) {
             String name = String.valueOf(clientName.getText());;
             AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
             builder.setTitle("Venta no permitida")

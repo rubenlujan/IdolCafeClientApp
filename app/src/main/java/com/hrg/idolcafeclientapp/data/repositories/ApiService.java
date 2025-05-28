@@ -1,5 +1,7 @@
 package com.hrg.idolcafeclientapp.data.repositories;
 
+import com.hrg.idolcafeclientapp.data.messages.CompanyRequest;
+import com.hrg.idolcafeclientapp.data.messages.SystemConfigResponse;
 import com.hrg.idolcafeclientapp.data.models.APIMPagoDataResponse;
 import com.hrg.idolcafeclientapp.data.models.CategoryRequest;
 import com.hrg.idolcafeclientapp.data.models.ItemComplementRequest;
@@ -26,5 +28,6 @@ public interface ApiService {
     Call<APIMPagoDataResponse> getAPIMPData();
     @POST("Orders/SendPaymentRequest")
     Call<PaymentResponse> SendPaymentRequest(@Body PaymentInfoRequest request);
-
+    @POST("GStock/GetSystemConfig")
+    Call<SystemConfigResponse> getSystemConfig(@Body CompanyRequest request);
 }

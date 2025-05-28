@@ -34,6 +34,9 @@ import androidx.core.content.FileProvider;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.Manifest;
+
+import com.hrg.idolcafeclientapp.data.messages.CompanyRequest;
+import com.hrg.idolcafeclientapp.data.messages.SystemConfigResponse;
 import com.hrg.idolcafeclientapp.data.models.ItemComplement;
 import com.hrg.idolcafeclientapp.data.models.ItemComplementRequest;
 import com.hrg.idolcafeclientapp.data.models.ItemComplementResponse;
@@ -128,6 +131,7 @@ public class LanguageSelectionActivity extends AppCompatActivity {
         btnEnglish.setOnClickListener(v -> openMainActivity("en"));
 
         getItemComplements();
+        getSystemConfig();
 
         // Inicia el bucle de imágenes
         startImageLoop();
@@ -392,7 +396,39 @@ public class LanguageSelectionActivity extends AppCompatActivity {
             }
         });
     }
-    // Manejar la respuesta del usuario
+    private void getSystemConfig() {
+        ApiService apiService;
+        apiService = RetrofitClient.getApiService();
+        CompanyRequest request = new CompanyRequest();
+        request.setCompanyId(1);
+        apiService.getSystemConfig(request).enqueue(new Callback<SystemConfigResponse>() {
+            @Override
+            public void onResponse(@NonNull Call<SystemConfigResponse> call, @NonNull Response<SystemConfigResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    var config = response.body().getConfig();
+                    Context context = getApplicationContext();
+                    SharedPreferences sharedPref = context.getSharedPreferences(
+                            "AppSettings",
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    String key = "allow_alcohol";
+                    editor.putInt(key, config.getAllowSaleAlcohol());
+                    key = "allow_terminal";
+                    editor.putInt(key, config.getAllowPaymentWithTerminal());
+                    editor.apply();
+                }
+                else {
+                    Toast.makeText(getBaseContext(), "Error al cargar configuración", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<SystemConfigResponse> call, @NonNull Throwable t) {
+                Toast.makeText(getBaseContext(), "Error al cargar configuración: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
