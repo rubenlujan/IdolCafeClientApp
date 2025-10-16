@@ -6,7 +6,16 @@ public class ItemComplement {
     private String Category;
     private int ItemComplementId;
     private String Description;
+    private String DescriptionEnglish;
     private double Price;
+
+    public String getDescriptionEnglish() {
+        return DescriptionEnglish;
+    }
+
+    public void setDescriptionEnglish(String descriptionEnglish) {
+        DescriptionEnglish = descriptionEnglish;
+    }
 
     public int getId() {
         return Id;

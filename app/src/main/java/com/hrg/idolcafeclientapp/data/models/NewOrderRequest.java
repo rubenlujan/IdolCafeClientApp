@@ -8,9 +8,19 @@ public class NewOrderRequest {
     private String type;
     private String PaymentStatus;
     private String PaymentId;
+    private double Discount;
     private List<NewOrderDetail> Items;
     public NewOrderRequest() {
         Items = new ArrayList<>();
+        Discount = 0;
+    }
+
+    public void setDiscount(double discount) {
+        Discount = discount;
+    }
+
+    public double getDiscount() {
+        return Discount;
     }
 
     public String getPaymentId() {

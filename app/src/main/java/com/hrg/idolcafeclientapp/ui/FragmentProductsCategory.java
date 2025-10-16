@@ -113,7 +113,7 @@ public class FragmentProductsCategory extends Fragment {
         CallServices.FillProductByCategoryList(categoryId, new ProductLoadCallback() {
             @Override
             public void onProductsLoaded(List<Product> products) {
-                if (products != null) {
+                if (products != null && !products.isEmpty()) {
                     filteredProducts.clear();
                     filteredProducts.addAll(products);
                     productAdapter.notifyDataSetChanged();

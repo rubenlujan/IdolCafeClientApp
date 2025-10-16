@@ -211,7 +211,8 @@ public class FragmentCardPayment extends Fragment {
             NewOrderDetail itemDetail = new NewOrderDetail();
             itemDetail.setId(item.getItemId());
             itemDetail.setQuantity(item.getQty());
-            itemDetail.setNotes(item.getNotes());
+            String notes = item.getNotes().isEmpty() ? item.getNotesCompl() : item.getNotes() + '-' + item.getNotesCompl();
+            itemDetail.setNotes(notes);
             request.AddItem(itemDetail);
         }
         ApiService apiService = RetrofitClient.getApiService();

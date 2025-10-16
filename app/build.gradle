@@ -13,8 +13,8 @@ android {
         applicationId "com.hrg.idolcafeclientapp"
         minSdk 33
         targetSdk 35
-        versionCode 8
-        versionName "1.1.4"
+        versionCode 11
+        versionName "1.1.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

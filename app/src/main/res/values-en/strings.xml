@@ -14,6 +14,10 @@
     <string name="fifth_menu_item_subtext">Sandwich, Bagguetes</string>
     <string name="sixth_menu_item_text">Desserts</string>
     <string name="sixth_menu_item_subtext">A sweet and delicious sin</string>
+    <string name="seventh_menu_item_text">Seasonal Drinks</string>
+    <string name="seventh_menu_item_subtext"> </string>
+    <string name="eighth_menu_item_text">Event Packages</string>
+    <string name="eighth_menu_item_subtext"> </string>
 
     <!--Shop Fragment -->
     <string name="button_amount_text">Add: %s MXN</string>

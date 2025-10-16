@@ -13,6 +13,10 @@
     <string name="fifth_menu_item_subtext">Sandwich, Bagguetes</string>
     <string name="sixth_menu_item_text">Postres</string>
     <string name="sixth_menu_item_subtext">Un dulce y delicioso pecado</string>
+    <string name="seventh_menu_item_text">Bebidas Temporada</string>
+    <string name="seventh_menu_item_subtext"> </string>
+    <string name="eighth_menu_item_text">Paquetes Eventos</string>
+    <string name="eighth_menu_item_subtext"> </string>
 
     <!--Shop Fragment -->
     <string name="button_amount_text">Añadir: %s</string>

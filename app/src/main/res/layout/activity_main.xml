@@ -316,6 +316,94 @@
                     android:gravity="center"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- 🔹 Botón 7 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/main_card_margin"
+            app:cardCornerRadius="@dimen/main_card_corner_radius"
+            app:cardElevation="@dimen/main_card_elevation"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btn7"
+                    android:layout_width="@dimen/main_button_size"
+                    android:layout_height="@dimen/main_button_size"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/seventh_menu_item_text"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_bebidas_temporada" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seventh_menu_item_text"
+                    android:textSize="@dimen/main_menu_text_size"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seventh_menu_item_subtext"
+                    android:textSize="@dimen/main_menu_subtext_size"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 🔹 Botón 8 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/main_card_margin"
+            app:cardCornerRadius="@dimen/main_card_corner_radius"
+            app:cardElevation="@dimen/main_card_elevation"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btn8"
+                    android:layout_width="@dimen/main_button_size"
+                    android:layout_height="@dimen/main_button_size"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/eighth_menu_item_text"
+                    android:src="@drawable/ic_menu_especial"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eighth_menu_item_text"
+                    android:textSize="@dimen/main_menu_text_size"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eighth_menu_item_subtext"
+                    android:textSize="@dimen/main_menu_subtext_size"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.gridlayout.widget.GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

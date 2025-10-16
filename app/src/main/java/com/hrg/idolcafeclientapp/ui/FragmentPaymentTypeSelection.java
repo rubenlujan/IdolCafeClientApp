@@ -107,14 +107,14 @@ public class FragmentPaymentTypeSelection extends Fragment {
         btnPago1.setOnClickListener(v -> {
             btnPago1.setBackground(selectedBg);
             btnPago2.setBackground(normalBg);
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            /*AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
             builder.setTitle("Error Pinpad")
                     .setMessage("No hay terminal instalada para el cobro con tarjeta.")
                     .setCancelable(false)
                     .setPositiveButton("OK", (dialog, which) -> { btnPago1.setBackground(normalBg); });
             AlertDialog dialog = builder.create();
-            dialog.show();
-            //openPaymentSelection();
+            dialog.show();*/
+            openPaymentSelection();
         });
 
         btnPago2.setOnClickListener(v -> {

@@ -59,6 +59,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.card4).setOnClickListener(v -> openProductsView(4));
         findViewById(R.id.card5).setOnClickListener(v -> openProductsView(5));
         findViewById(R.id.card6).setOnClickListener(v -> openProductsView(6));
+        findViewById(R.id.card7).setOnClickListener(v -> openProductsView(10));
+        findViewById(R.id.card8).setOnClickListener(v -> openProductsView(11));
 
     }
 
