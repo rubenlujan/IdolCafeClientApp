@@ -1,0 +1,20 @@
+# --- Archivos de Configuración y Secretos ---
+**/local.properties
+**/secrets.xml
+**/google-services.json
+**/fabric.properties
+**/*.jks
+**/*.keystore
+
+# --- Variables de Entorno ---
+**/.env
+**/.env.*
+
+# --- Directorios de Compilación (Suelen ser ruidosos) ---
+**/build/
+**/intermediates/
+**/outputs/
+
+# --- Documentación Sensible ---
+docs/privacidad/
+**/proyectos_internos/

@@ -209,6 +209,7 @@ public class FragmentCardPayment extends Fragment {
         request.setPaymentId(PaymentId);
         for (CartItem item : products) {
             NewOrderDetail itemDetail = new NewOrderDetail();
+            itemDetail.setPrice(item.getPrice());
             itemDetail.setId(item.getItemId());
             itemDetail.setQuantity(item.getQty());
             String notes = item.getNotes().isEmpty() ? item.getNotesCompl() : item.getNotes() + '-' + item.getNotesCompl();
